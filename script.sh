@@ -1,7 +1,3 @@
 #!/bin/bash
 
-sudo su postgres
-psql
-ALTER USER postgres PASSWORD 'postgres';
-\q
-exit
+sudo -u postgres psql -U postgres -d postgres -c "ALTER USER postgres PASSWORD 'postgres';"
